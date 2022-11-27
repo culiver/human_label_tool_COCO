@@ -30,12 +30,13 @@ def draw_bodypose(canvas, keypoints, body_part='top'):
 
 limbSeq = np.array([[0,1],[0,14],[0,15],[14,16],[15,17],[1,2],[1,5],[1,8],[1,11],[2,3],[3,4],[5,6],[6,7],[8,9],[9,10],[11,12],[12,13]])
 
-targetVideo = 'video_lab_5G_220_08_run_train.avi'
+targetVideo = 'video_final_5G_p2_11_train.avi'
 
 out_dir = os.path.join('result', os.path.basename(targetVideo).split('.')[0])
 os.makedirs(out_dir, exist_ok=True)
 
-targetFrames = (450, 700)
+start_frame = 6400
+targetFrames = (start_frame, start_frame+200)
 pic_idx = targetFrames[0]
 # for pic_idx in targetFrames:
 while pic_idx < targetFrames[1]:
